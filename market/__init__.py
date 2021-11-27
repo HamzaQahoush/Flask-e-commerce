@@ -17,4 +17,8 @@ Bootstrap(app)
 bcrypt=Bcrypt(app)
 login_manager=LoginManager(app)
 
+#to redirect anonymous user to login if he want to reach login_required page
+login_manager.login_view='login_page'
+# to set the flash message as usual.
+login_manager.login_message_category ='info'
 from market import routes
